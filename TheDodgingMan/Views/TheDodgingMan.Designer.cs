@@ -67,7 +67,6 @@
             this.tdmOfficial.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.tdmOfficial.TabIndex = 5;
             this.tdmOfficial.TabStop = false;
-            this.tdmOfficial.Click += new System.EventHandler(this.tdmOfficial_Click);
             // 
             // dodgebox1
             // 
@@ -99,14 +98,13 @@
             // over
             // 
             this.over.AutoSize = true;
-            this.over.Font = new System.Drawing.Font("Perpetua Titling MT", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.over.ForeColor = System.Drawing.Color.Cyan;
-            this.over.Location = new System.Drawing.Point(94, 219);
+            this.over.Font = new System.Drawing.Font("Consolas", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.over.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.over.Location = new System.Drawing.Point(96, 80);
             this.over.Name = "over";
-            this.over.Size = new System.Drawing.Size(288, 48);
+            this.over.Size = new System.Drawing.Size(284, 56);
             this.over.TabIndex = 9;
             this.over.Text = "Game Over!";
-            this.over.Click += new System.EventHandler(this.GameOverLabel_Click);
             // 
             // heart1
             // 
@@ -139,23 +137,22 @@
             // 
             this.heartscountlabel.BackColor = System.Drawing.Color.Transparent;
             this.heartscountlabel.Cursor = System.Windows.Forms.Cursors.Default;
-            this.heartscountlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.heartscountlabel.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.heartscountlabel.ForeColor = System.Drawing.Color.IndianRed;
-            this.heartscountlabel.Location = new System.Drawing.Point(0, -1);
+            this.heartscountlabel.Location = new System.Drawing.Point(12, 9);
             this.heartscountlabel.Name = "heartscountlabel";
-            this.heartscountlabel.Size = new System.Drawing.Size(107, 34);
+            this.heartscountlabel.Size = new System.Drawing.Size(135, 35);
             this.heartscountlabel.TabIndex = 13;
             this.heartscountlabel.Text = "Hearts=0";
-            this.heartscountlabel.Click += new System.EventHandler(this.label1_Click);
             // 
             // RestartButton
             // 
             this.RestartButton.BackColor = System.Drawing.Color.Transparent;
-            this.RestartButton.Font = new System.Drawing.Font("Hobo Std", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RestartButton.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RestartButton.ForeColor = System.Drawing.Color.DarkGreen;
-            this.RestartButton.Location = new System.Drawing.Point(185, 314);
+            this.RestartButton.Location = new System.Drawing.Point(178, 262);
             this.RestartButton.Name = "RestartButton";
-            this.RestartButton.Size = new System.Drawing.Size(96, 48);
+            this.RestartButton.Size = new System.Drawing.Size(110, 55);
             this.RestartButton.TabIndex = 14;
             this.RestartButton.Text = "Back to menu";
             this.RestartButton.UseVisualStyleBackColor = false;
@@ -163,22 +160,23 @@
             // 
             // heartsatend
             // 
-            this.heartsatend.AutoSize = true;
-            this.heartsatend.Font = new System.Drawing.Font("Microsoft YaHei", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.heartsatend.Location = new System.Drawing.Point(172, 276);
+            this.heartsatend.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.heartsatend.ForeColor = System.Drawing.Color.White;
+            this.heartsatend.Location = new System.Drawing.Point(117, 162);
             this.heartsatend.Name = "heartsatend";
-            this.heartsatend.Size = new System.Drawing.Size(130, 19);
+            this.heartsatend.Size = new System.Drawing.Size(230, 38);
             this.heartsatend.TabIndex = 15;
             this.heartsatend.Text = "You got 0 hearts!";
+            this.heartsatend.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ExitButton
             // 
             this.ExitButton.BackColor = System.Drawing.Color.Transparent;
-            this.ExitButton.Font = new System.Drawing.Font("Hobo Std", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitButton.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExitButton.ForeColor = System.Drawing.Color.DarkRed;
-            this.ExitButton.Location = new System.Drawing.Point(187, 383);
+            this.ExitButton.Location = new System.Drawing.Point(180, 331);
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(96, 48);
+            this.ExitButton.Size = new System.Drawing.Size(110, 55);
             this.ExitButton.TabIndex = 16;
             this.ExitButton.Text = "Exit";
             this.ExitButton.UseVisualStyleBackColor = false;
@@ -204,7 +202,6 @@
             this.Controls.Add(this.tdmOfficial);
             this.Name = "TheDodgingMan";
             this.Text = "TheDodgingMan";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.tdmOfficial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dodgebox1)).EndInit();

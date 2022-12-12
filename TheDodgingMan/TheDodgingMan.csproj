@@ -46,33 +46,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TheDodgingMan.cs">
+    <Compile Include="Views\TheDodgingMan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TheDodgingMan.Designer.cs">
+    <Compile Include="Views\TheDodgingMan.Designer.cs">
       <DependentUpon>TheDodgingMan.cs</DependentUpon>
     </Compile>
-    <Compile Include="WelcomeScreen.cs">
+    <Compile Include="Views\WelcomeScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WelcomeScreen.Designer.cs">
+    <Compile Include="Views\WelcomeScreen.Designer.cs">
       <DependentUpon>WelcomeScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="ThanksScreen.cs">
+    <Compile Include="Views\ThanksScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ThanksScreen.Designer.cs">
+    <Compile Include="Views\ThanksScreen.Designer.cs">
       <DependentUpon>ThanksScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="TheDodgingMan.resx">
+    <EmbeddedResource Include="Views\TheDodgingMan.resx">
       <DependentUpon>TheDodgingMan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WelcomeScreen.resx">
+    <EmbeddedResource Include="Views\WelcomeScreen.resx">
       <DependentUpon>WelcomeScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ThanksScreen.resx">
+    <EmbeddedResource Include="Views\ThanksScreen.resx">
       <DependentUpon>ThanksScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

@@ -1,17 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TheDodgingMan
 {
     public partial class TheDodgingMan : Form
     {
+        private const int EnemySpeed = 8;
+        private int CollectedCoins = 0;
+        private Random r = new Random();
+        private int x;
+
         public TheDodgingMan()
         {
             InitializeComponent();
@@ -21,26 +20,15 @@ namespace TheDodgingMan
             ExitButton.Visible = false;
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        int enemyspeed = 8;
-
         private void timer1_Tick(object sender, EventArgs e)
         {
-            Enemy(enemyspeed);
+            Enemy(EnemySpeed);
             Coins(8);
             CoinsCollection();
             GameOver();
         }
 
-        int collectedcoins = 0;
-
-        Random r = new Random();
-        int x;
-        void Enemy(int speed)
+        private void Enemy(int speed)
         {
             if (dodgebox1.Top >= 500)
             {
@@ -49,7 +37,7 @@ namespace TheDodgingMan
             }
             else
             {
-                dodgebox1.Top += enemyspeed;
+                dodgebox1.Top += EnemySpeed;
             }
 
             if (dodgebox2.Top >= 500)
@@ -59,7 +47,7 @@ namespace TheDodgingMan
             }
             else
             {
-                dodgebox2.Top += enemyspeed;
+                dodgebox2.Top += EnemySpeed;
             }
 
             if (dodgebox3.Top >= 500)
@@ -69,11 +57,11 @@ namespace TheDodgingMan
             }
             else
             {
-                dodgebox3.Top += enemyspeed;
+                dodgebox3.Top += EnemySpeed;
             }
         }
 
-        void Coins(int speed)
+        private void Coins(int speed)
         {
             if (heart3.Top >= 500)
             {
@@ -107,9 +95,9 @@ namespace TheDodgingMan
 
         }
 
-        void GameOverReset()
+        private void GameOverReset()
         {
-            heartsatend.Text = "You got " + collectedcoins.ToString() + " hearts!";
+            heartsatend.Text = "You got " + CollectedCoins.ToString() + " hearts!";
 
             dodgebox1.Visible = false;
             dodgebox2.Visible = false;
@@ -125,7 +113,7 @@ namespace TheDodgingMan
             ExitButton.Visible = true;
             heartsatend.Visible = true;
         }
-        void GameOver()
+        private void GameOver()
         {
             if (tdmOfficial.Bounds.IntersectsWith(dodgebox1.Bounds) ||
                 tdmOfficial.Bounds.IntersectsWith(dodgebox2.Bounds) ||
@@ -134,46 +122,31 @@ namespace TheDodgingMan
                 GameOverReset();
             }
 
-        }      
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-
         }
-        
-        void CoinsCollection()
+
+        private void CoinsCollection()
         {
             if (tdmOfficial.Bounds.IntersectsWith(heart3.Bounds))
             {
-                collectedcoins++;
-                heartscountlabel.Text = "Hearts: " + collectedcoins.ToString();
+                CollectedCoins++;
+                heartscountlabel.Text = "Hearts: " + CollectedCoins.ToString();
                 x = r.Next(50, 300);
                 heart3.Location = new Point(x, 0);
             }
             if (tdmOfficial.Bounds.IntersectsWith(heart2.Bounds))
             {
-                collectedcoins++;
-                heartscountlabel.Text = "Hearts: " + collectedcoins.ToString();
+                CollectedCoins++;
+                heartscountlabel.Text = "Hearts: " + CollectedCoins.ToString();
                 x = r.Next(50, 300);
                 heart2.Location = new Point(x, 0);
             }
             if (tdmOfficial.Bounds.IntersectsWith(heart1.Bounds))
             {
-                collectedcoins++;
-                heartscountlabel.Text = "Hearts: " + collectedcoins.ToString();
+                CollectedCoins++;
+                heartscountlabel.Text = "Hearts: " + CollectedCoins.ToString();
                 x = r.Next(50, 300);
                 heart1.Location = new Point(x, 0);
             }
-        }
-
-        private void GameOverLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tdmOfficial_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void RestartButton_Click(object sender, EventArgs e)
@@ -181,28 +154,18 @@ namespace TheDodgingMan
             Application.Restart();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode==Keys.Left)
+            if (e.KeyCode == Keys.Left)
             {
-                if (tdmOfficial.Left>0)
-                tdmOfficial.Left += -19;
+                if (tdmOfficial.Left > 0)
+                tdmOfficial.Left -= 19;
             }
-            if (e.KeyCode==Keys.Right)
+            if (e.KeyCode == Keys.Right)
             {
-                if (tdmOfficial.Right<454)
+                if (tdmOfficial.Right < 454)
                 tdmOfficial.Left += 19;
             }
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
